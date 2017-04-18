@@ -1,0 +1,302 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>WELCOME TO IPU TOPPER </title>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis|Macondo" rel="stylesheet">
+	<script type="text/javascript">
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+
+		setTimeout(function() {
+			var ele = document.getElementById("t1");
+			ele.innerHTML = "Welcome"
+			ele.classList.add("rollIn");
+
+		}, 2000);
+		setTimeout(function() {
+			var ele = document.getElementById("t2");
+			ele.innerHTML = "To"
+			ele.classList.add("rotateIn");
+		}, 4000);
+		setTimeout(function() {
+			var ele = document.getElementById("t3");
+			ele.innerHTML = "IPU  Topper"
+			ele.classList.add("zoomInDown");
+		}, 6000);
+
+		setTimeout(function() {
+			var ele = document.getElementById("getstartedbtn");
+			ele.classList.add("zoomInDown");
+			ele.style.opacity = 0.77;
+		}, 8000);
+
+		setTimeout(function() {
+			var ele = document.getElementById("sss");
+			var btn = document.getElementById("sidebtn");
+			ele.classList.add("fadeInDownBig");
+			ele.style.opacity = 1;
+			btn.style.opacity = 1;
+			
+		}, 10000);
+
+	</script>
+
+	<style>
+		@keyframes fadeInDownBig {
+			from {
+				opacity: 0;
+				transform: translate3d(0, -2000px, 0);
+			}
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+		
+		.fadeInDownBig {
+			animation-name: fadeInDownBig;
+			animation-duration: 2s;
+		}
+		
+		@keyframes zoomInDown {
+			from {
+				opacity: 0;
+				transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+				animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+			}
+			60% {
+				opacity: 1;
+				transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+				animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+			}
+		}
+		
+		.zoomInDown {
+			animation-duration: 2s;
+			animation-name: zoomInDown;
+		}
+		
+		@keyframes rotateIn {
+			from {
+				transform-origin: center;
+				transform: rotate3d(0, 0, 1, -200deg);
+				opacity: 0;
+			}
+			to {
+				transform-origin: center;
+				transform: none;
+				opacity: 1;
+			}
+		}
+		
+		@keyframes rollIn {
+			from {
+				opacity: 0;
+				transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+			}
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+		
+		.rollIn {
+			animation-duration: 2s;
+			animation-name: rollIn;
+		}
+		
+		.rotateIn {
+			animation-duration: 2s;
+			animation-name: rotateIn;
+		}
+		
+		.cover-animation {
+			font-size: 40px;
+		}
+		
+		.cover1 {
+			margin: 20px;
+			float: left;
+		}
+		
+		.cover2 {
+			float: left;
+			margin: 20px;
+		}
+		
+		.cover3 {
+			float: left;
+			margin: 20px;
+		}
+		
+		.getstarted {
+			position: absolute;
+			left: 70%;
+			top: 50%;
+		}
+		
+		#getstartedbtn {
+			background-color: #400040;
+			color: white;
+			font-family: 'Merriweather', serif;
+			border-radius: 5px;
+			font-size: 30px;
+			opacity: 0;
+		}
+		
+		#getstartedbtn:hover {
+			background-color: green;
+			color: white;
+			font-family: 'Merriweather', serif;
+			border-radius: 5px;
+			font-size: 30px;
+		}
+		
+		.header {
+			height: 100%;
+		}
+		
+		#sss {
+			opacity: 0;
+		}
+		
+		.feet {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			font-size: 20px;
+			text-align: center;
+			font-family: 'Dosis', sans-serif;
+		}
+		
+		body {
+			background-color: #000000;
+			color: #ffffff;
+			font-family: 'Macondo', cursive;
+		}
+		
+		.sidenav {
+			height: 100%;
+			width: 0;
+			/* 0 width - change this with JavaScript */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Stay on top */
+			top: 0;
+			left: 0;
+			background-color: #4CAF50;
+			/* Black*/
+			overflow-x: hidden;
+			/* Disable horizontal scroll */
+			padding-top: 60px;
+			/* Place content 60px from the top */
+			transition: 0.5s;
+			/* 0.5 second transition effect to slide in the sidenav */
+		}
+		
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 25px;
+			color: white;
+			display: block;
+			transition: 0.3s
+		}
+		
+		.sidenav a:hover,
+		.offcanvas a:focus {
+			color: #FBFFA9;
+		}
+		/* Position and style the close button (top right corner) */
+		
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+		/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+		
+		#main {
+			transition: margin-left .5s;
+			padding: 20px;
+		}
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		
+		@media screen and (max-height: 450px) {
+			.sidenav {
+				padding-top: 15px;
+			}
+			.sidenav a {
+				font-size: 18px;
+			}
+		}
+		
+		.btn2 {
+			background-color: #4CAF50;
+			color: white;
+			display: block;
+			height: 37px;
+			width: 37px;
+			border-radius: 50%;
+			border: none;
+			text-align: center;
+			font-size: 20px;
+			opacity: 0;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<div class="header">
+		<input type="button" id="sidebtn" class="btn2" value="+" onClick="openNav()">
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="about.html">About</a>
+			<a href="contact.html">Contact</a>
+		</div>
+		<div class="cover-animation">
+			<div class="cover1">
+				<!-- cover page animation is done here -->
+				<h1 id="t1"></h1>
+			</div>
+
+			<div class="cover2">
+
+				<h1 id="t2"></h1>
+
+			</div>
+			<div class="cover3">
+				<h1 id="t3"></h1>
+			</div>
+			<div class="getstarted">
+				<input type="button" id="getstartedbtn" onclick="myfunc()" value="LET'S GET STARTED"></input>
+
+			</div>
+
+
+		</div>
+	</div>
+	<div class="feet">
+		<h3 id="sss">coded with &#9825; by Soham , Shaurya and Suraj &#x24B8; 2017 </h3>
+	</div>
+
+</body>
+
+</html>
